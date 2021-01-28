@@ -3,6 +3,7 @@ let player1Score = 0;
 let player2Score = 0;
 let player1Turn = true;
 
+let player2NewName = "";
 
 const player1ScoreBoard = document.getElementById('player1Scoreboard');
 const player2ScoreBoard = document.getElementById('player2Scoreboard');
@@ -12,8 +13,30 @@ const message = document.getElementById('message');
 const rollBtn = document.getElementById('rollBtn');
 const resetBtn = document.getElementById('resetBtn');
 const container = document.getElementsByClassName('container');
+let player1Name = document.getElementById('player1name')
+let player2Name = document.getElementById('player2name')
+ const submitNames = document.getElementById('submitBtn')
+const introContainer = document.getElementById('intro');
+const gameContainer = document.getElementById('game-container');
 
 
+
+
+
+
+submitNames.addEventListener("click" , myGame)
+
+	function myGame(){
+
+			gameContainer.style.display = "block";
+			introContainer.style.display = "none";
+			let player1NewName = player1Name.value;
+			let player2NewName = player2Name.value;
+			message.textContent = player1Name.value + "'s Turn" ;
+	}
+
+
+	
 
 
 function displayButton(){
@@ -27,14 +50,16 @@ rollBtn.addEventListener('click' , function(){
 
 	const randomNumber = Math.floor(Math.random() * 6) + 1;
 
+
+		
 	
 	if(player1Turn){
 
 		
 		player1Score += randomNumber;
-		player1Dice.textContent = randomNumber;
-		player1ScoreBoard.textContent = player1Score;
-		message.textContent = "Player 2 Turn"
+		player1ScoreBoard.textContent = player1Score; 
+		message.textContent = player2Name.value + "'s Turn" ;
+	
 		player1Dice.classList.remove('active');
 		player2Dice.classList.add('active');
 		
@@ -74,7 +99,7 @@ rollBtn.addEventListener('click' , function(){
 		player2Score += randomNumber;
 		player2Dice.textContent = randomNumber;
 		player2ScoreBoard.textContent = player2Score;
-		message.textContent = "Player 1 Turn"
+		message.textContent = player1Name.value + "'s Turn" ;
 		player2Dice.classList.remove('active');
 		player1Dice.classList.add('active');
 
@@ -112,7 +137,7 @@ rollBtn.addEventListener('click' , function(){
 		 		
 		if (player1Score >= 20 ) {
 
-			message.textContent="🎉 Player 1 Wins 🎉";
+			message.textContent="🎉 " + player1Name.value +" Wins 🎉";
 			displayButton();
 			
 				
@@ -122,9 +147,10 @@ rollBtn.addEventListener('click' , function(){
 
 			
 
-			message.textContent="🎉 Player 2 Wins 🎉"
+			message.textContent="🎉 " + player2Name.value +" Wins 🎉";
 			displayButton();
 			
+		
 			
 		}
 
@@ -137,7 +163,11 @@ resetBtn.addEventListener("click" , resetGame)
 
 function resetGame(){
 
-				message.textContent = "Player 1 Turn"
+				introContainer.style.display = "block";
+				gameContainer.style.display = "none";
+				player1Name.value = ""
+				player2Name.value = ""
+				message.textContent = player1Name.value + "'s Turn" ;
 				player1ScoreBoard.textContent = 0;
 				player2ScoreBoard.textContent = 0;	
 				player1Dice.textContent = "-";
@@ -161,5 +191,5 @@ function resetGame(){
 
 		
 
-		
+	
 
