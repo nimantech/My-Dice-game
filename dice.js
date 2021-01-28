@@ -25,18 +25,19 @@ function displayButton(){
 
 rollBtn.addEventListener('click' , function(){
 
-	let randomNumber = Math.floor(Math.random() * 6) + 1;
+	const randomNumber = Math.floor(Math.random() * 6) + 1;
 
 	
 	if(player1Turn){
 
-		player1Dice.textContent = randomNumber;
+		
 		player1Score += randomNumber;
+		player1Dice.textContent = randomNumber;
 		player1ScoreBoard.textContent = player1Score;
 		message.textContent = "Player 2 Turn"
 		player1Dice.classList.remove('active');
 		player2Dice.classList.add('active');
-		player1Dice.style.backgroundImage = "url('images/dice2.png')"
+		
 
 		if (randomNumber == 1) {
 
@@ -70,9 +71,8 @@ rollBtn.addEventListener('click' , function(){
 	}
 
 	else{
-
-		player2Dice.textContent = randomNumber;
 		player2Score += randomNumber;
+		player2Dice.textContent = randomNumber;
 		player2ScoreBoard.textContent = player2Score;
 		message.textContent = "Player 1 Turn"
 		player2Dice.classList.remove('active');
@@ -133,7 +133,7 @@ rollBtn.addEventListener('click' , function(){
 
 })
 
-
+resetBtn.addEventListener("click" , resetGame)
 
 function resetGame(){
 
@@ -151,16 +151,15 @@ function resetGame(){
 				player1Dice.classList.add('active');
 				player1Dice.style.backgroundImage = "url('images/bg.gif')"
 				player2Dice.style.backgroundImage = "url('images/bg.gif')"
-				player1Turn = Boolean(Math.round(Math.random()));
 				container[0].style.backgroundImage = "url('images/bg.jpg')";
-				console.log(player1Turn)
+				
 					
 
 
 			}
 
 
-		resetBtn.addEventListener("click" , resetGame)
+		
 
 		
 
