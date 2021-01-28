@@ -86,6 +86,13 @@ button:hover{
      font-weight: 700;
 }
 
+#submitBtn{
+
+       background-image:linear-gradient(midnightblue, black);
+    font-weight: 700;
+    color: #ffd700;
+
+}
 button:focus {
     outline: none;
 }
@@ -121,3 +128,13 @@ button:focus {
 
 }
 
+#game-container{
+
+    display: none;
+}
+
+input{
+
+    margin: 10px;
+    padding: 5px;
+}
