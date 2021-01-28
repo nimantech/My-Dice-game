@@ -16,9 +16,8 @@ body {
     height: 100vh;
     color: black;
     background-image: url('images/bgdice.jpg');
-        
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
@@ -64,8 +63,8 @@ button {
     border: none;
     border-radius: 40px;
     cursor: pointer;
-     border:1px outset grey;
-        box-shadow: 1px 1px 5px grey;
+    border:1px outset grey;
+    box-shadow: 1px 1px 5px grey;
 }
 
 button:hover{
@@ -103,7 +102,7 @@ button:focus {
 #player1Dice,#player2Dice{
 
     background-image: url('images/bg.gif');
-        transition: 500ms;
+        
         background-repeat: no-repeat;
         background-size: cover;
         border:5px solid black;
@@ -114,7 +113,7 @@ button:focus {
 .container{
 
     background-image: url('images/bg.jpg');
-        transition: 1s;
+        
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 15px;

@@ -114,7 +114,7 @@ rollBtn.addEventListener('click' , function(){
 
 			message.textContent="🎉 Player 1 Wins 🎉";
 			displayButton();
-			container[0].style.backgroundImage = "url('images/win.gif')";
+			container[0].style.backgroundImage = "url('images/win1.jpg')";
 				
 
 		}
@@ -124,7 +124,7 @@ rollBtn.addEventListener('click' , function(){
 
 			message.textContent="🎉 Player 2 Wins 🎉"
 			displayButton();
-			container[0].style.backgroundImage = "url('images/win.gif')";
+			container[0].style.backgroundImage = "url('images/win1.jpg')";
 		
 			
 		}
