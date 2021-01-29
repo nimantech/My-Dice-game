@@ -62,37 +62,6 @@ rollBtn.addEventListener('click', function () {
 
 		player1Dice.classList.remove('active');
 		player2Dice.classList.add('active');
-
-
-		// if (randomNumber == 1) {
-
-		// 	player1Dice.style.backgroundImage = "url('images/dice1.png')"
-		// }
-		// else if (randomNumber == 2) {
-
-		// 	player1Dice.style.backgroundImage = "url('images/dice2.png')"
-		// }
-
-		// else if (randomNumber == 3) {
-
-		// 	player1Dice.style.backgroundImage = "url('images/dice3.png')"
-		// }
-
-		// else if (randomNumber == 4) {
-
-		// 	player1Dice.style.backgroundImage = "url('images/dice4.png')"
-		// }
-
-		// else if (randomNumber == 5) {
-
-		// 	player1Dice.style.backgroundImage = "url('images/dice5.png')"
-		// }
-
-		// else if (randomNumber == 6) {
-
-		// 	player1Dice.style.backgroundImage = "url('images/dice6.png')"
-		// }
-		
 		player1Dice.style.backgroundImage = `url('images/dice${randomNumber}.png')`
 
 	}
@@ -104,36 +73,7 @@ rollBtn.addEventListener('click', function () {
 		message.textContent = player1Name.value + "'s Turn";
 		player2Dice.classList.remove('active');
 		player1Dice.classList.add('active');
-
-		// if (randomNumber == 1) {
-
-		// 	player2Dice.style.backgroundImage = "url('images/dice1.png')"
-		// }
-		// else if (randomNumber == 2) {
-
-		// 	player2Dice.style.backgroundImage = "url('images/dice2.png')"
-		// }
-
-		// else if (randomNumber == 3) {
-
-		// 	player2Dice.style.backgroundImage = "url('images/dice3.png')"
-		// }
-
-		// else if (randomNumber == 4) {
-
-		// 	player2Dice.style.backgroundImage = "url('images/dice4.png')"
-		// }
-
-		// else if (randomNumber == 5) {
-
-		// 	player2Dice.style.backgroundImage = "url('images/dice5.png')"
-		// }
-
-		// else if (randomNumber == 6) {
-
-		// 	player2Dice.style.backgroundImage = "url('images/dice6.png')"
-		// }
-			player2Dice.style.backgroundImage = `url('images/dice${randomNumber}.png')`
+		player2Dice.style.backgroundImage = `url('images/dice${randomNumber}.png')`
 
 
 	}
