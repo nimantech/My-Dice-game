@@ -105,34 +105,35 @@ rollBtn.addEventListener('click', function () {
 		player2Dice.classList.remove('active');
 		player1Dice.classList.add('active');
 
-		if (randomNumber == 1) {
+		// if (randomNumber == 1) {
 
-			player2Dice.style.backgroundImage = "url('images/dice1.png')"
-		}
-		else if (randomNumber == 2) {
+		// 	player2Dice.style.backgroundImage = "url('images/dice1.png')"
+		// }
+		// else if (randomNumber == 2) {
 
-			player2Dice.style.backgroundImage = "url('images/dice2.png')"
-		}
+		// 	player2Dice.style.backgroundImage = "url('images/dice2.png')"
+		// }
 
-		else if (randomNumber == 3) {
+		// else if (randomNumber == 3) {
 
-			player2Dice.style.backgroundImage = "url('images/dice3.png')"
-		}
+		// 	player2Dice.style.backgroundImage = "url('images/dice3.png')"
+		// }
 
-		else if (randomNumber == 4) {
+		// else if (randomNumber == 4) {
 
-			player2Dice.style.backgroundImage = "url('images/dice4.png')"
-		}
+		// 	player2Dice.style.backgroundImage = "url('images/dice4.png')"
+		// }
 
-		else if (randomNumber == 5) {
+		// else if (randomNumber == 5) {
 
-			player2Dice.style.backgroundImage = "url('images/dice5.png')"
-		}
+		// 	player2Dice.style.backgroundImage = "url('images/dice5.png')"
+		// }
 
-		else if (randomNumber == 6) {
+		// else if (randomNumber == 6) {
 
-			player2Dice.style.backgroundImage = "url('images/dice6.png')"
-		}
+		// 	player2Dice.style.backgroundImage = "url('images/dice6.png')"
+		// }
+			player2Dice.style.backgroundImage = `url('images/dice${randomNumber}.png')`
 
 
 	}
